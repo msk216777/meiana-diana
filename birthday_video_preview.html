@@ -7,16 +7,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-</head>
+
+<style>
+body{margin:0!important;background:#64192f!important;}
+.side-nav,.progress-line,.music-fab,#bgMusic,.petals,#toast,
+#home,#story,#memories,#names,#voice,#countdown,#timeline,#openwhen,#distance,#meeting,#final{display:none!important;}
+main{margin:0!important;}
+#birthday{display:block!important;min-height:100vh!important;}
+</style>
+<style>#birthdayVideoOverlay{opacity:1!important;visibility:visible!important;pointer-events:auto!important;}</style></head>
 <body>
-<div class="progress-line" id="progressLine"></div>
-<button class="music-fab" id="musicFab" title="Play / pause birthday music" aria-label="Play / pause birthday music">♫</button>
-<audio id="bgMusic" loop preload="auto"><source src="assets/diana-birthday-music.mp3" type="audio/mpeg"></audio>
+
+
+
 <div class="petals" aria-hidden="true"></div>
-<nav class="side-nav">
-  <div class="brand">Meiana<span>♥</span><small>Meghraj × Diana</small></div>
-  <a href="#home" class="active">⌂ <span>Home</span></a><a href="#story">♡ <span>Our Story</span></a><a href="#memories">▧ <span>Memories</span></a><a href="#names">♢ <span>Lilliput</span></a><a href="#special">♥ <span>Daino & Capsicum</span></a><a href="#voice">◉ <span>Voice Message</span></a><a href="#birthday">♔ <span>Birthday Surprise</span></a><a href="#countdown">⌛ <span>Countdown</span></a><a href="#timeline">✦ <span>Timeline</span></a><a href="#openwhen">✉ <span>Open When</span></a><a href="#puzzle">♢ <span>Heart Puzzle</span></a><a href="#secret">🔐 <span>Secret Door</span></a><a href="#gift">🎁 <span>Gift Reveal</span></a><a href="#letters">✉ <span>Open Letters</span></a><a href="#distance">⌁ <span>Distance & Us</span></a><a href="#meeting">♡ <span>Our First Meeting</span></a><a href="#final">❤ <span>For Always</span></a>
-</nav>
+
 <main>
 <section id="home" class="hero">
   <div class="hero-photo" role="img" aria-label="Romantic Meiana background"></div>
@@ -139,14 +144,22 @@
 <section id="birthday" class="birthday section">
  <div class="section-head light"><span>06</span><div><p>MAKE A WISH, DAINO...</p><h2>Birthday Surprise <i>♥</i></h2></div></div>
  <div class="cake-wrap">
-   <div class="cake-scene" aria-label="Beautiful birthday cake with four candles">
+   <div class="cake-scene" aria-label="Birthday cake with candles">
      <div class="cake-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
      <div class="cake">
-       <div class="candles" aria-label="Birthday candles">
-         <button class="candle" type="button" aria-label="Blow out candle 1" onclick="blow(this)"><span class="flame"></span><span class="wick"></span><span class="candle-body"></span></button>
-         <button class="candle" type="button" aria-label="Blow out candle 2" onclick="blow(this)"><span class="flame"></span><span class="wick"></span><span class="candle-body"></span></button>
-         <button class="candle" type="button" aria-label="Blow out candle 3" onclick="blow(this)"><span class="flame"></span><span class="wick"></span><span class="candle-body"></span></button>
-         <button class="candle" type="button" aria-label="Blow out candle 4" onclick="blow(this)"><span class="flame"></span><span class="wick"></span><span class="candle-body"></span></button>
+       <div class="candles" aria-label="Three birthday candles">
+         <button class="candle" aria-label="Candle 1" onclick="blow(this)">
+           <span class="flame"></span><span class="wick"></span><span class="candle-body"></span>
+         </button>
+         <button class="candle" aria-label="Candle 2" onclick="blow(this)">
+           <span class="flame"></span><span class="wick"></span><span class="candle-body"></span>
+         </button>
+         <button class="candle" aria-label="Candle 3" onclick="blow(this)">
+           <span class="flame"></span><span class="wick"></span><span class="candle-body"></span>
+         </button>
+         <button class="candle" aria-label="Candle 4" onclick="blow(this)">
+           <span class="flame"></span><span class="wick"></span><span class="candle-body"></span>
+         </button>
        </div>
        <div class="strawberries" aria-hidden="true"><span>●</span><span>●</span><span>●</span><span>●</span></div>
        <div class="top"></div>
@@ -155,8 +168,8 @@
        <div class="base"></div>
      </div>
    </div>
-   <p id="wishText">Make a wish… then tap/blow out each candle. ♥</p>
-   <small class="birthday-hint">When the last candle goes out, your birthday video opens automatically.</small>
+   <p id="wishText">Light the candles… make a wish. ♥</p>
+   <small class="birthday-hint">Tap each candle after you make your wish.</small>
  </div>
 </section>
 
@@ -203,56 +216,60 @@
 </section>
 
 <section id="puzzle" class="rose-section section">
- <div class="section-head light"><span>10</span><div><p>A LITTLE HEART GAME</p><h2>Put Our Names Together <i>♥</i></h2></div></div>
- <div class="puzzle-layout">
-  <div class="puzzle-panel">
-   <p class="puzzle-note"><b>How to solve:</b> tap any two tiles to swap them. Use the reference on the right and arrange the tiles to spell <b>MEGHRAJ ♥ DIANA</b>.</p>
-   <div class="puzzle" id="puzzle" aria-label="Meghraj and Diana name puzzle"></div>
-   <div class="puzzle-actions"><button class="puzzle-shuffle" id="puzzleShuffle" type="button">Shuffle Again ♥</button></div>
-   <div class="puzzle-complete" id="puzzleComplete" aria-live="polite"></div>
-  </div>
-  <aside class="puzzle-reference-card">
-   <div class="reference-tag">LOOK HERE 👀</div>
-   <img src="assets/puzzle-reference.png" alt="Solved puzzle reference showing MEGHRAJ and DIANA">
-   <p>Use this image as your guide while solving.</p>
-  </aside>
- </div>
+ <div class="section-head light"><span>10</span><div><p>A LITTLE SECRET GAME</p><h2>Put Our Heart Together <i>♥</i></h2></div></div>
+ <div class="puzzle-wrap"><p class="puzzle-note">Tap two tiles to swap them. Finish the tiny puzzle to reveal the message.</p><div class="puzzle" id="puzzle"></div><div class="puzzle-complete" id="puzzleComplete"></div></div>
 </section>
 
 <section id="secret" class="secret-section section">
  <div class="section-head light"><span>11</span><div><p>ONLY SOMEONE WHO KNOWS US</p><h2>The Secret Door <i>♥</i></h2></div></div>
- <div class="secret-box"><p>There is a tiny message hidden here. Enter our secret word.</p><input class="secret-input" id="secretInput" placeholder="our secret word" autocomplete="off" aria-label="Secret word"><button class="secret-btn" type="button" onclick="unlockSecret()">Unlock ♥</button><div class="secret-door-status" id="secretDoorStatus" aria-live="polite">🔒 The door is waiting for you…</div><div class="secret-result" id="secretResult" aria-live="polite"></div></div>
+ <div class="secret-box"><p>There is a tiny message hidden here. Enter the secret word.</p><input class="secret-input" id="secretInput" placeholder="secret word" autocomplete="off"><button class="secret-btn" onclick="unlockSecret()">Unlock ♥</button><div class="secret-result" id="secretResult"></div></div>
 </section>
 
 <section id="gift" class="gift-section section">
  <div class="section-head"><span>12</span><div><p>ONE LAST LITTLE SURPRISE</p><h2>Open Your Birthday Gift <i>♥</i></h2></div></div>
- <div class="gift-box" id="giftBox">
-   <p class="gift-hint">Tap the ribbon box. I kept one last surprise inside… ♥</p>
-   <button class="gift-lid" type="button" onclick="openGift()" aria-label="Open Diana's birthday gift">
-     <span class="gift-ribbon-cross"></span><span class="gift-bow">♥</span>
-   </button>
-   <div class="gift-body"><div class="inside">For Diana — with love from Meghraj ♥</div></div>
-   <div class="gift-reveal" id="giftReveal" aria-hidden="true">
-      <div class="gift-photo-frame"><img src="assets/megharaj-gift.png" alt="Meghraj — Diana's birthday gift"></div>
-      <div class="gift-message"><span class="tiny-kicker">ONE LAST SECRET…</span><h3>I AM YOUR GIFT ❤️</h3><p>You found me. Now keep me. ♥</p><b>— Meghraj</b></div>
+ <div class="gift-box" id="giftBox"><p>Tap the ribbon box.</p><div class="gift-lid" onclick="openGift()"></div><div class="gift-body"><div class="inside">For Diana — with love from Meghraj ♥</div></div></div>
+</section>
+
+<section id="messi" class="messi-section section">
+ <div class="section-head light"><span>07</span><div><p>A SPECIAL SURPRISE FOR DIANA</p><h2>From Her Favourite Footballer <i>♥</i></h2></div></div>
+ <div class="messi-reveal">
+   <div class="football-glow"></div>
+   <div class="messi-topline"><span class="verified-dot">✓</span> SPECIAL BIRTHDAY MOMENT</div>
+   <div class="messi-content">
+     <div class="messi-portrait" aria-label="Football-themed portrait placeholder">
+       <div class="stadium-lights"></div>
+       <div class="jersey-number">10</div>
+       <div class="jersey-name">MESSI</div>
+       <span class="argentina-mark">AFA</span>
+     </div>
+     <div class="messi-message">
+       <p class="small-kicker">DIANA, THIS ONE IS FOR YOU ⚽</p>
+       <h3>Lionel Messi</h3>
+       <p class="wish-lead">“A little football surprise for the girl who has always loved watching her favourite player.”</p>
+       <div class="wish-player">
+         <div class="play-circle">▶</div>
+         <div><b>Birthday Wish</b><span>Insert the genuine / authorized Messi birthday video here</span></div>
+       </div>
+       <p class="auth-note">For the real celebrity greeting, place an authentic or properly licensed recording in <b>assets/messi-wish.mp4</b>. This section is intentionally designed so a real message can be added without changing the Meiana theme.</p>
+     </div>
    </div>
+   <div class="messi-footer"><span>⚽</span> Her favourite footballer. Your special birthday surprise. <span>♥</span></div>
  </div>
 </section>
 
-
 <section id="letters" class="paper section letter-section">
- <div class="section-head"><span>13</span><div><p>FROM MEG HRAJ. TO DIANA.</p><h2>A Special Letter <i>♥</i></h2></div></div>
+ <div class="section-head"><span>08</span><div><p>FROM MEG HRAJ. TO DIANA.</p><h2>A Special Letter <i>♥</i></h2></div></div>
  <button class="envelope" onclick="openLetter()"><span class="wax">M</span><b>Tap to open</b></button>
  <div class="letter hidden" id="letter"><h3>To My Lilliput, Daino & My Favourite Capsicum ♥</h3><p>My Dear Diana,</p><p>Happy Birthday, my Lilliput. ♥</p><p>Sometimes the most beautiful people enter our lives quietly. They simply become part of our days, our thoughts, and eventually, our hearts.</p><p>We have shared countless calls, laughter, dreams, worries, photographs and silly arguments. Yet the most beautiful part of our story is that we have never even met one-on-one.</p><p>We haven't sat together, walked together, or looked into each other's eyes while having these conversations. And still, somehow, you never felt far away.</p><p>Maybe distance is measured in kilometres, but closeness is measured in moments.</p><p>My Lilliput—you may have a tiny name, but somehow you found a very big place in my heart. My Daino, you became familiar in a way I never expected.</p><p>And then there is my favourite Capsicum. 😂♥ Sweet, spicy, slightly dramatic, and somehow impossible not to love.</p><p>I wish I could be there today—to hand you this gift, see your expression, and simply say “Happy Birthday” while standing in front of you. For now, this letter has to cross the distance for me. Let it be a small hug from far away.</p><p>Someday, when we finally meet, I hope we look back at these days and smile—because before we ever stood beside each other, we somehow became important to each other from a distance.</p><p>Happy Birthday, my sweet Diana. ♥</p><p>With all my love,<br><b>Meghraj ♥</b></p><p><i>P.S. — One day, I'll give you that birthday hug in person. Until then, keep this letter safe. ♥</i></p></div>
 </section>
 
 <section id="distance" class="distance section">
- <div class="section-head"><span>14</span><div><p>DIFFERENT PLACES. SAME LITTLE WORLD.</p><h2>Distance & Us <i>♥</i></h2></div></div>
+ <div class="section-head"><span>09</span><div><p>DIFFERENT PLACES. SAME LITTLE WORLD.</p><h2>Distance & Us <i>♥</i></h2></div></div>
  <div class="route"><div><span>♥</span><b>Meghraj</b><small>Karnataka, India</small></div><div class="dashed">········ ♥ ········</div><div><span>♥</span><b>Diana</b><small>Assam, India</small></div></div>
  <p class="center-quote">“Kilometres apart, but our conversations somehow crossed the distance.”</p>
 </section>
 
-<section id="meeting" class="meeting paper section"><div class="section-head"><span>15</span><div><p>A CHAPTER STILL WAITING FOR US...</p><h2>Our First Meeting <i>♥</i></h2></div></div><div class="meeting-card"><div class="arch">♥</div><h3>No screen between us.</h3><p>No kilometres between us.<br>No “good night” through a phone.<br><b>Just you and me.</b></p><p>Until that day, this chapter remains unwritten.</p></div></section>
+<section id="meeting" class="meeting paper section"><div class="section-head"><span>10</span><div><p>A CHAPTER STILL WAITING FOR US...</p><h2>Our First Meeting <i>♥</i></h2></div></div><div class="meeting-card"><div class="arch">♥</div><h3>No screen between us.</h3><p>No kilometres between us.<br>No “good night” through a phone.<br><b>Just you and me.</b></p><p>Until that day, this chapter remains unwritten.</p></div></section>
 
 <section id="final" class="final section"><div class="final-inner"><p class="eyebrow">AND SO, MY STORY CONTINUES...</p><h2>Happy Birthday,<br><span>Diana ♥</span></h2><p>My Lilliput. My Daino. My favourite Capsicum.</p><p class="tiny">Thank you for becoming one of the most beautiful parts of my days. May this year bring you closer to everything you wish for—and one day, closer to me.</p><div class="signature">Meghraj <span>♥</span></div><button class="ornate-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Read It Again ♥</button></div></section>
 </main>
