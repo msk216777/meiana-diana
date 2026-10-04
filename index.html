@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Meiana — A Little World for Diana</title>
+<meta name="description" content="A romantic birthday world made by Meghraj for Diana.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress-line" id="progressLine"></div>
+<button class="music-fab" id="musicFab" title="Play / pause birthday music" aria-label="Play / pause birthday music">♫</button>
+<audio id="bgMusic" loop preload="auto"><source src="assets/diana-birthday-music.mp3" type="audio/mpeg"></audio>
+<div class="petals" aria-hidden="true"></div>
+<nav class="side-nav">
+  <div class="brand">Meiana<span>♥</span><small>Meghraj × Diana</small></div>
+  <a href="#home" class="active">⌂ <span>Home</span></a><a href="#story">♡ <span>Our Story</span></a><a href="#memories">▧ <span>Memories</span></a><a href="#names">♢ <span>Lilliput</span></a><a href="#special">♥ <span>Daino & Capsicum</span></a><a href="#voice">◉ <span>Voice Message</span></a><a href="#birthday">♔ <span>Birthday Surprise</span></a><a href="#countdown">⌛ <span>Countdown</span></a><a href="#timeline">✦ <span>Timeline</span></a><a href="#openwhen">✉ <span>Open When</span></a><a href="#puzzle">♢ <span>Heart Puzzle</span></a><a href="#secret">🔐 <span>Secret Door</span></a><a href="#gift">🎁 <span>Gift Reveal</span></a><a href="#letters">✉ <span>Open Letters</span></a><a href="#distance">⌁ <span>Distance & Us</span></a><a href="#meeting">♡ <span>Our First Meeting</span></a><a href="#final">❤ <span>For Always</span></a>
+</nav>
+<main>
+<section id="home" class="hero">
+  <div class="hero-photo" role="img" aria-label="Romantic Meiana background"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">A LITTLE WORLD FOR</p><h1>Diana<span>♥</span></h1>
+    <p class="hero-copy">Not a story borrowed from Romeo and Juliet.<br><b>Our own little story — still being written.</b></p>
+    <p class="hero-sub">Two people. Different places. Countless conversations.<br>And a first meeting that is still waiting for us.</p>
+    <button class="ornate-btn" onclick="document.querySelector('#story').scrollIntoView({behavior:'smooth'})">Tap to Enter <span>♥</span></button>
+  </div>
+
+  <div class="home-memory-gallery" aria-label="Twenty-two little moments of Diana">
+    <figure class="home-memory-card" style="--hx:-45%;--hy:-24%;--hr:-10deg;"><img src="assets/home-diana-01.jpg" alt="Diana memory 1" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-33%;--hy:-4%;--hr:8deg;"><img src="assets/home-diana-02.jpg" alt="Diana memory 2" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-31%;--hy:18%;--hr:-6deg;"><img src="assets/home-diana-03.jpg" alt="Diana memory 3" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-46%;--hy:39%;--hr:7deg;"><img src="assets/home-diana-04.jpg" alt="Diana memory 4" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-15%;--hy:43%;--hr:-4deg;"><img src="assets/home-diana-05.jpg" alt="Diana memory 5" loading="lazy"></figure><figure class="home-memory-card" style="--hx:0%;--hy:46%;--hr:4deg;"><img src="assets/home-diana-06.jpg" alt="Diana memory 6" loading="lazy"></figure><figure class="home-memory-card" style="--hx:15%;--hy:43%;--hr:-7deg;"><img src="assets/home-diana-07.jpg" alt="Diana memory 7" loading="lazy"></figure><figure class="home-memory-card" style="--hx:31%;--hy:39%;--hr:7deg;"><img src="assets/home-diana-08.jpg" alt="Diana memory 8" loading="lazy"></figure><figure class="home-memory-card" style="--hx:46%;--hy:18%;--hr:-5deg;"><img src="assets/home-diana-09.jpg" alt="Diana memory 9" loading="lazy"></figure><figure class="home-memory-card" style="--hx:33%;--hy:-4%;--hr:7deg;"><img src="assets/home-diana-10.jpg" alt="Diana memory 10" loading="lazy"></figure><figure class="home-memory-card" style="--hx:45%;--hy:-25%;--hr:-7deg;"><img src="assets/home-diana-11.jpg" alt="Diana memory 11" loading="lazy"></figure><figure class="home-memory-card" style="--hx:23%;--hy:-31%;--hr:4deg;"><img src="assets/home-diana-12.jpg" alt="Diana memory 12" loading="lazy"></figure><figure class="home-memory-card" style="--hx:10%;--hy:-35%;--hr:-5deg;"><img src="assets/home-diana-13.jpg" alt="Diana memory 13" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-10%;--hy:-35%;--hr:6deg;"><img src="assets/home-diana-14.jpg" alt="Diana memory 14" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-23%;--hy:-31%;--hr:-7deg;"><img src="assets/home-diana-15.jpg" alt="Diana memory 15" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-19%;--hy:-18%;--hr:4deg;"><img src="assets/home-diana-16.jpg" alt="Diana memory 16" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-8%;--hy:-24%;--hr:-5deg;"><img src="assets/home-diana-17.jpg" alt="Diana memory 17" loading="lazy"></figure><figure class="home-memory-card" style="--hx:8%;--hy:-24%;--hr:5deg;"><img src="assets/home-diana-18.jpg" alt="Diana memory 18" loading="lazy"></figure><figure class="home-memory-card" style="--hx:19%;--hy:-18%;--hr:-4deg;"><img src="assets/home-diana-19.jpg" alt="Diana memory 19" loading="lazy"></figure><figure class="home-memory-card" style="--hx:-55%;--hy:3%;--hr:3deg;"><img src="assets/home-diana-20.jpg" alt="Diana memory 20" loading="lazy"></figure><figure class="home-memory-card" style="--hx:55%;--hy:3%;--hr:-3deg;"><img src="assets/home-diana-21.jpg" alt="Diana memory 21" loading="lazy"></figure><figure class="home-memory-card" style="--hx:0%;--hy:33%;--hr:2deg;"><img src="assets/home-diana-22.jpg" alt="Diana memory 22" loading="lazy"></figure>
+  </div>
+  <div class="home-memory-label">22 little pieces of Diana&nbsp; ♥</div>
+  <div class="scroll-note">scroll gently ↓</div>
+</section>
+
+<section id="story" class="paper section">
+  <div class="section-head"><span>01</span><div><p>THE BEGINNING</p><h2>Our Story <i>♥</i></h2></div></div>
+  <div class="story-grid">
+    <article><div class="chapter-no">I</div><h3>The Beginning</h3><p>A simple conversation that quietly became something neither of us expected.</p></article>
+    <article><div class="chapter-no">II</div><h3>Long Calls</h3><p>Hours of stories, laughter, random thoughts, teasing and the kind of silence that still feels comfortable.</p></article>
+    <article><div class="chapter-no">III</div><h3>The Distance</h3><p>Different places, but somehow the distance never stopped you from becoming part of my everyday life.</p></article>
+    <article><div class="chapter-no">IV</div><h3>Today</h3><p>Photos, calls, little arguments, “it's my wish,” and all the tiny moments that became ours.</p></article>
+    <article><div class="chapter-no">V</div><h3>Not Written Yet</h3><p>Our first meeting. No screen between us. No kilometres between us. Just you and me.</p></article>
+  </div>
+</section>
+
+<section id="memories" class="rose-section section">
+  <div class="section-head light"><span>02</span><div><p>THE LITTLE UNIVERSE</p><h2>Her Little Moments <i>♥</i></h2></div></div>
+  <div class="memory-note">Five more little pieces of Diana's world — saved here exactly as they were. Tap any photo to open it.</div>
+  <div class="memory-count"><span>5</span> new little moments · one person · one beautiful story</div>
+  <div class="memory-wall">
+    <figure class="memory-photo tilt1" tabindex="0" data-full="assets/diana-photos/memory-new-1.png"><img src="assets/diana-photos/memory-new-1.png" alt="Diana new memory 1" loading="lazy"><figcaption>A little late-night moment ♥</figcaption></figure><figure class="memory-photo tilt3" tabindex="0" data-full="assets/diana-photos/memory-new-2.png"><img src="assets/diana-photos/memory-new-2.png" alt="Diana new memory 2" loading="lazy"><figcaption>One of those quiet little moments</figcaption></figure><figure class="memory-photo tilt5" tabindex="0" data-full="assets/diana-photos/memory-new-3.png"><img src="assets/diana-photos/memory-new-3.png" alt="Diana new memory 3" loading="lazy"><figcaption>A tiny piece of our calls</figcaption></figure><figure class="memory-photo tilt2" tabindex="0" data-full="assets/diana-photos/memory-new-4.png"><img src="assets/diana-photos/memory-new-4.png" alt="Diana new memory 4" loading="lazy"><figcaption>Your playful side, forever saved 😂♥</figcaption></figure><figure class="memory-photo tilt4" tabindex="0" data-full="assets/diana-photos/memory-new-5.png"><img src="assets/diana-photos/memory-new-5.png" alt="Diana new memory 5" loading="lazy"><figcaption>Just another little piece of your world</figcaption></figure>
+  </div>
+</section>
+
+<section id="names" class="paper section">
+ <div class="section-head"><span>03</span><div><p>THREE NAMES. ONE PERSON.</p><h2>Lilliput, Daino & Capsicum <i>♥</i></h2></div></div>
+ <div class="name-cards"><article><div class="symbol">🎀</div><h3>Lilliput</h3><p>A tiny name with a very big place in my heart.</p></article><article><div class="symbol">🦋</div><h3>Daino</h3><p>A name that belongs to our own little world.</p></article><article><div class="symbol">🌶️</div><h3>Capsicum</h3><p>Sweet. Spicy. A little dramatic. And somehow impossible not to love. 😂♥</p></article></div>
+</section>
+
+<section id="special" class="cream section">
+ <div class="section-head"><span>04</span><div><p>JUST A FEW OF THE REASONS</p><h2>Why You're Special <i>♥</i></h2></div></div>
+ <div class="reason-grid"><div class="reason">♬<b>Your voice</b><span>Hours of talking can make an ordinary day feel special.</span></div><div class="reason">✦<b>Your randomness</b><span>I never know what you'll say next.</span></div><div class="reason">♥<b>Your moods</b><span>Even your angry moments become part of my memories.</span></div><div class="reason">▤<b>Your stories</b><span>I could listen to your school, college and life stories again.</span></div><div class="reason">♕<b>Your stubbornness</b><span>Especially that famous “It's my wish.” 😂</span></div><div class="reason">∞<b>Just being you</b><span>You don't have to try to be special. You already are.</span></div></div>
+</section>
+
+<section id="voice" class="rose-section section">
+ <div class="section-head light"><span>05</span><div><p>FOR THIS PART...</p><h2>Don't Read. Listen. <i>♥</i></h2></div></div>
+ <div class="voice-box"><p>Your personal birthday message is waiting here.</p><audio controls><source src="assets/voice.mp3" type="audio/mpeg">Your browser does not support audio.</audio><small>A little voice message, just for you. ♥</small></div>
+</section>
+
+<section id="birthday" class="birthday section">
+ <div class="section-head light"><span>06</span><div><p>MAKE A WISH, DAINO...</p><h2>Birthday Surprise <i>♥</i></h2></div></div>
+ <div class="cake-wrap"><div class="cake">
+  <div class="candles" aria-label="Birthday candles">
+   <button class="candle" type="button" onclick="blow(this)" aria-label="Blow candle 1"><span class="flame">♥</span></button>
+   <button class="candle" type="button" onclick="blow(this)" aria-label="Blow candle 2"><span class="flame">♥</span></button>
+   <button class="candle" type="button" onclick="blow(this)" aria-label="Blow candle 3"><span class="flame">♥</span></button>
+   <button class="candle" type="button" onclick="blow(this)" aria-label="Blow candle 4"><span class="flame">♥</span></button>
+  </div>
+  <div class="top"></div><div class="layer"></div><div class="base"></div>
+ </div><p id="wishText">Tap each candle. Make a wish. ♥</p></div>
+</section>
+
+<div class="birthday-video-overlay" id="birthdayVideoOverlay" aria-hidden="true"><button class="birthday-video-close" id="birthdayVideoClose" aria-label="Close birthday video">×</button><div class="birthday-video-inner"><video id="birthdaySurpriseVideo" playsinline preload="metadata" controls><source src="assets/birthday-cake-video.mp4" type="video/mp4"></video><p class="birthday-video-caption">A little birthday surprise for you, Diana. ♥</p></div></div>
+
+<section id="countdown" class="countdown-section section">
+ <div class="section-head"><span>07½</span><div><p>THE DAY WE ARE WAITING FOR</p><h2>Birthday Countdown <i>♥</i></h2></div></div>
+ <p class="center-quote">October 5, 2026 — the day this little world was made for you.</p>
+ <div class="countdown-grid"><div class="countbox"><strong id="days">00</strong><span>Days</span></div><div class="countbox"><strong id="hours">00</strong><span>Hours</span></div><div class="countbox"><strong id="minutes">00</strong><span>Minutes</span></div><div class="countbox"><strong id="seconds">00</strong><span>Seconds</span></div></div>
+</section>
+
+<section id="timeline" class="paper section"><div class="section-head"><span>08</span><div><p>THE CHAPTERS WE ACTUALLY HAVE</p><h2>Our Little Timeline <i>♥</i></h2></div></div><div class="timeline"><div class="timeline-item"><h3>When it began</h3><p>A conversation became familiar. Familiar became something we started looking forward to.</p></div><div class="timeline-item"><h3>The long calls</h3><p>Four or five hours can disappear when there are stories, jokes, moods, dreams and random conversations to share.</p></div><div class="timeline-item"><h3>The little things</h3><p>Photos, family stories, college stories, teasing, “it's my wish,” and all the tiny details that made the bond feel personal.</p></div><div class="timeline-item"><h3>The future chapter</h3><p>There is one memory we don't have yet: meeting face to face. That's why it belongs at the end of our timeline—not the beginning.</p></div></div></section>
+
+<section id="openwhen" class="cream section">
+ <div class="section-head"><span>09</span><div><p>FOR THE DAYS I CAN'T BE THERE</p><h2>Open When... <i>♥</i></h2></div></div>
+ <div class="openwhen-grid"><article class="when-card" onclick="toggleWhen(this)"><span class="lock">✉</span><h3 class="tease">Open when you miss me</h3><p class="hidden-msg">If distance feels bigger today, remember: the story is still being written. I'm only one call away. ❤️</p></article><article class="when-card" onclick="toggleWhen(this)"><span class="lock">✉</span><h3 class="tease">Open when you can't sleep</h3><p class="hidden-msg">Think of all those nights when a “good night” conversation somehow became much longer than planned. 😂❤️</p></article><article class="when-card" onclick="toggleWhen(this)"><span class="lock">✉</span><h3 class="tease">Open when you're angry</h3><p class="hidden-msg">Okay, Capsicum. Take a breath first. Then remember that someone still loves your dramatic “it's my wish.” 😂</p></article><article class="when-card" onclick="toggleWhen(this)"><span class="lock">✉</span><h3 class="tease">Open when you have a bad day</h3><p class="hidden-msg">You don't have to be cheerful every day. You can simply be Diana. I'll still want to hear your stories.</p></article><article class="when-card" onclick="toggleWhen(this)"><span class="lock">✉</span><h3 class="tease">Open when you feel alone</h3><p class="hidden-msg">Different places don't erase connection. Somewhere in the distance, your Lilliput-sized nickname still has a very big place in my heart.</p></article><article class="when-card" onclick="toggleWhen(this)"><span class="lock">✉</span><h3 class="tease">Open when we finally meet</h3><p class="hidden-msg">No screen. No kilometres. No waiting. Just look at me and smile. We finally made it to this chapter. ❤️</p></article></div>
+</section>
+
+<section id="puzzle" class="rose-section section">
+ <div class="section-head light"><span>10</span><div><p>A LITTLE HEART GAME</p><h2>Put Our Names Together <i>♥</i></h2></div></div>
+ <div class="puzzle-layout"><div class="puzzle-panel"><p class="puzzle-note"><b>How to solve:</b> tap any two tiles to swap them. Use the reference on the right and arrange the tiles to spell <b>MEGHRAJ ♥ DIANA</b>.</p><div class="puzzle" id="puzzle" aria-label="Meghraj and Diana name puzzle"></div><div class="puzzle-actions"><button class="puzzle-shuffle" id="puzzleShuffle" type="button">Shuffle Again ♥</button></div><div class="puzzle-complete" id="puzzleComplete" aria-live="polite"></div></div><aside class="puzzle-reference-card"><div class="reference-tag">LOOK HERE 👀</div><img src="assets/puzzle-reference.png" alt="Solved puzzle reference showing MEGHRAJ and DIANA"><p>Use this image as your guide while solving.</p></aside></div>
+</section>
+
+<section id="secret" class="secret-section section">
+ <div class="section-head light"><span>11</span><div><p>ONLY SOMEONE WHO KNOWS US</p><h2>The Secret Door <i>♥</i></h2></div></div>
+ <div class="secret-box"><p>There is a tiny message hidden here. Enter our secret word.</p><input class="secret-input" id="secretInput" placeholder="our secret word" autocomplete="off" aria-label="Secret word"><button class="secret-btn" type="button" onclick="unlockSecret()">Unlock ♥</button><div class="secret-door-status" id="secretDoorStatus" aria-live="polite">🔒 The door is waiting for you…</div><div class="secret-result" id="secretResult" aria-live="polite"></div></div>
+</section>
+
+<section id="gift" class="gift-section section">
+ <div class="section-head"><span>12</span><div><p>ONE LAST LITTLE SURPRISE</p><h2>Open Your Birthday Gift <i>♥</i></h2></div></div>
+ <div class="gift-box" id="giftBox"><p class="gift-hint">Tap the ribbon box. I kept one last surprise inside… ♥</p><button class="gift-lid" type="button" onclick="openGift()" aria-label="Open Diana's birthday gift"><span class="gift-ribbon-cross"></span><span class="gift-bow">♥</span></button><div class="gift-body"><div class="inside">For Diana — with love from Meghraj ♥</div></div><div class="gift-reveal" id="giftReveal" aria-hidden="true"><div class="gift-photo-frame"><img src="assets/megharaj-gift.png" alt="Meghraj — Diana's birthday gift"></div><div class="gift-message"><span class="tiny-kicker">ONE LAST SECRET…</span><h3>I AM YOUR GIFT ❤️</h3><p>You found me. Now keep me. ♥</p><b>— Meghraj</b></div></div></div>
+</section>
+
+<section id="letters" class="paper section letter-section">
+ <div class="section-head"><span>13</span><div><p>FROM MEG HRAJ. TO DIANA.</p><h2>A Special Letter <i>♥</i></h2></div></div>
+ <button class="envelope" onclick="openLetter()"><span class="wax">M</span><b>Tap to open</b></button>
+ <div class="letter hidden" id="letter"><h3>To My Lilliput, Daino & My Favourite Capsicum ♥</h3><p>My Dear Diana,</p><p>Happy Birthday, my Lilliput. ♥</p><p>Sometimes the most beautiful people enter our lives quietly. They simply become part of our days, our thoughts, and eventually, our hearts.</p><p>We have shared countless calls, laughter, dreams, worries, photographs and silly arguments. Yet the most beautiful part of our story is that we have never even met one-on-one.</p><p>We haven't sat together, walked together, or looked into each other's eyes while having these conversations. And still, somehow, you never felt far away.</p><p>Maybe distance is measured in kilometres, but closeness is measured in moments.</p><p>My Lilliput—you may have a tiny name, but somehow you found a very big place in my heart. My Daino, you became familiar in a way I never expected.</p><p>And then there is my favourite Capsicum. 😂♥ Sweet, spicy, slightly dramatic, and somehow impossible not to love.</p><p>I wish I could be there today—to hand you this gift, see your expression, and simply say “Happy Birthday” while standing in front of you. For now, this letter has to cross the distance for me. Let it be a small hug from far away.</p><p>Someday, when we finally meet, I hope we look back at these days and smile—because before we ever stood beside each other, we somehow became important to each other from a distance.</p><p>Happy Birthday, my sweet Diana. ♥</p><p>With all my love,<br><b>Meghraj ♥</b></p><p><i>P.S. — One day, I'll give you that birthday hug in person. Until then, keep this letter safe. ♥</i></p></div>
+</section>
+
+<section id="distance" class="distance section"><div class="section-head"><span>14</span><div><p>DIFFERENT PLACES. SAME LITTLE WORLD.</p><h2>Distance & Us <i>♥</i></h2></div></div><div class="route"><div><span>♥</span><b>Meghraj</b><small>Karnataka, India</small></div><div class="dashed">········ ♥ ········</div><div><span>♥</span><b>Diana</b><small>Assam, India</small></div></div><p class="center-quote">“Kilometres apart, but our conversations somehow crossed the distance.”</p></section>
+
+<section id="meeting" class="meeting paper section"><div class="section-head"><span>15</span><div><p>A CHAPTER STILL WAITING FOR US...</p><h2>Our First Meeting <i>♥</i></h2></div></div><div class="meeting-card"><div class="arch">♥</div><h3>No screen between us.</h3><p>No kilometres between us.<br>No “good night” through a phone.<br><b>Just you and me.</b></p><p>Until that day, this chapter remains unwritten.</p></div></section>
+
+<section id="final" class="final section"><div class="final-inner"><p class="eyebrow">AND SO, MY STORY CONTINUES...</p><h2>Happy Birthday,<br><span>Diana ♥</span></h2><p>My Lilliput. My Daino. My favourite Capsicum.</p><p class="tiny">Thank you for becoming one of the most beautiful parts of my days. May this year bring you closer to everything you wish for—and one day, closer to me.</p><div class="signature">Meghraj <span>♥</span></div><button class="ornate-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Read It Again ♥</button></div></section>
+</main>
+
+<div class="photo-lightbox" id="photoLightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close photo">×</button><div class="lightbox-inner"><img id="lightboxImage" src="" alt="Diana memory"><p id="lightboxCaption"></p></div></div>
+<div id="toast"></div>
+<script src="js/script.js"></script>
+</body></html>
