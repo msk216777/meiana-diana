@@ -689,3 +689,93 @@ body.birthday-video-open{overflow:hidden}
 @supports(padding:max(0px)){
   .side-nav{padding-bottom:max(7px,env(safe-area-inset-bottom))}
 }
+
+
+/* =========================================================
+   FINAL MOBILE HOME GALLERY FIX
+   22 Diana photos stay in a compact two-row layout,
+   matching the desktop "row of memories" feeling.
+   ========================================================= */
+@media (max-width: 800px){
+  .hero-memory-gallery{
+    left:0!important;
+    right:0!important;
+    top:auto!important;
+    bottom:18px!important;
+    height:185px!important;
+    padding:8px 14px!important;
+    display:grid!important;
+    grid-template-rows:repeat(2,78px)!important;
+    grid-auto-flow:column!important;
+    grid-auto-columns:68px!important;
+    align-content:center!important;
+    justify-content:start!important;
+    gap:10px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    background:linear-gradient(180deg,transparent 0%,rgba(255,247,244,.32) 100%)!important;
+    scroll-snap-type:x proximity!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch!important;
+    z-index:6!important;
+  }
+  .hero-memory-gallery::-webkit-scrollbar{display:none!important}
+  .home-memory-card{
+    position:relative!important;
+    left:auto!important;
+    top:auto!important;
+    width:68px!important;
+    height:78px!important;
+    min-width:68px!important;
+    flex:none!important;
+    margin:0!important;
+    padding:4px 4px 8px!important;
+    transform:none!important;
+    scroll-snap-align:center!important;
+    box-shadow:0 8px 18px rgba(44,15,28,.18)!important;
+  }
+  .home-memory-card:nth-child(3n),
+  .home-memory-card:nth-child(3n+1),
+  .home-memory-card:nth-child(4n){
+    transform:none!important;
+  }
+  .home-memory-card img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  .home-memory-card::after{
+    right:4px!important;
+    bottom:0!important;
+    font-size:8px!important;
+  }
+  .home-memory-label{
+    left:50%!important;
+    bottom:207px!important;
+    max-width:84vw!important;
+    font-size:8px!important;
+    padding:5px 10px!important;
+    letter-spacing:.9px!important;
+    z-index:7!important;
+  }
+}
+
+@media (max-width:480px){
+  .hero-memory-gallery{
+    height:170px!important;
+    bottom:16px!important;
+    grid-template-rows:repeat(2,70px)!important;
+    grid-auto-columns:61px!important;
+    gap:8px!important;
+    padding:8px 12px!important;
+  }
+  .home-memory-card{
+    width:61px!important;
+    min-width:61px!important;
+    height:70px!important;
+    padding:3px 3px 7px!important;
+  }
+  .home-memory-label{
+    bottom:190px!important;
+  }
+}
