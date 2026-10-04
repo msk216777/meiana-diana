@@ -225,3 +225,43 @@ function openLetter(){
     toast('Your final gift is here, Diana. ❤️');
   };
 })();
+
+
+/* Open When cards — tap once to reveal, tap again to close. */
+function toggleWhen(card){
+  if(!card) return;
+  const isOpen = card.classList.toggle('open');
+  const teaser = card.querySelector('.tease');
+  const message = card.querySelector('.hidden-msg');
+  const lock = card.querySelector('.lock');
+
+  card.setAttribute('aria-expanded', String(isOpen));
+  if(teaser){
+    teaser.setAttribute('aria-hidden', String(isOpen));
+  }
+  if(message){
+    message.setAttribute('aria-hidden', String(!isOpen));
+    message.setAttribute('tabindex', isOpen ? '0' : '-1');
+  }
+  if(lock){
+    lock.textContent = isOpen ? '♥' : '✉';
+  }
+
+  if(isOpen){
+    card.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.when-card').forEach(card=>{
+    card.setAttribute('role','button');
+    card.setAttribute('tabindex','0');
+    card.setAttribute('aria-expanded','false');
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter' || e.key===' '){
+        e.preventDefault();
+        toggleWhen(card);
+      }
+    });
+  });
+});
