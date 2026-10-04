@@ -3,7 +3,7 @@
 
 
 /* No background video: preserve the original romantic theme with a still hero image. */
-.hero-photo{position:absolute;inset:0;background:url('../assets/design-preview.png') center/cover no-repeat;transform:scale(1.01)}
+.hero-photo{position:absolute;inset:0;background:url('design-preview.png') center/cover no-repeat;transform:scale(1.01)}
 
 /* Celebrity wish section — designed for an authentic/authorized recording, not a fabricated celebrity message. */
 .messi-section{position:relative;background:linear-gradient(135deg,#2b0d18 0%,#571a2b 48%,#210b13 100%);color:#fff;overflow:hidden}
@@ -13,7 +13,7 @@
 .messi-topline{padding:18px 28px;border-bottom:1px solid rgba(255,255,255,.14);font-size:11px;letter-spacing:3px;font-weight:600;color:#f8d6df}
 .verified-dot{display:inline-flex;width:20px;height:20px;align-items:center;justify-content:center;border-radius:50%;background:#dba4b5;color:#3a1020;margin-right:9px;font-size:12px}
 .messi-content{display:grid;grid-template-columns:42% 58%;min-height:440px}
-.messi-portrait{position:relative;min-height:440px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:42px;background:radial-gradient(circle at 50% 20%,rgba(255,235,241,.3),transparent 25%),linear-gradient(180deg,rgba(31,61,99,.15),rgba(18,8,14,.85)),url('../assets/design-preview.png') center/cover;isolation:isolate}
+.messi-portrait{position:relative;min-height:440px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:42px;background:radial-gradient(circle at 50% 20%,rgba(255,235,241,.3),transparent 25%),linear-gradient(180deg,rgba(31,61,99,.15),rgba(18,8,14,.85)),url('design-preview.png') center/cover;isolation:isolate}
 .messi-portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(24,5,12,.88) 100%);z-index:-1}
 .stadium-lights{position:absolute;top:35px;width:75%;height:55px;background:radial-gradient(ellipse,rgba(255,255,255,.55),transparent 60%);filter:blur(10px)}
 .jersey-number{font-family:'Cormorant Garamond',serif;font-size:150px;line-height:.8;font-weight:700;color:rgba(255,255,255,.88);text-shadow:0 6px 35px rgba(0,0,0,.55)}
